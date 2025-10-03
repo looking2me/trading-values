@@ -43,13 +43,13 @@
       color: #aaa;
     }
 
-    /* Main */
+    /* Main content */
     .main {
       margin-left: 220px;
       flex: 1;
     }
 
-    /* Banner */
+    /* Banner / Header */
     .header {
       background: url("stars.gif") center center/cover no-repeat;
       padding: 80px 20px;
@@ -70,7 +70,7 @@
       font-weight: bold;
     }
 
-    /* Item grid */
+    /* Grid container for all cards */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -79,8 +79,9 @@
       background: #1b1b1b;
     }
 
+    /* Card default styles */
     .card {
-      background: #2a2a2a; /* lighter gray */
+      background: #2a2a2a; /* light gray shade */
       padding: 20px;
       border-radius: 12px;
       text-align: center;
@@ -104,20 +105,20 @@
       line-height: 1.5;
     }
 
-    /* Colors for item tags */
+    /* Colors for demand/stability tags */
     .hot { color: orange; }
     .good { color: lightgreen; }
     .insane { color: violet; }
     .rising { color: #3ddc84; }
     .overpay { color: #8a2be2; }
+    .stable { color: lightgray; }
     .great { color: #00bfff; }
-    .average { color: #ffff00; }
-    .slightly-above-average { color: #7fff00; }
-    .slightly-below-average { color: #ff8c00; }
+    .average { color: #c0c0c0; }
+    .above-average { color: #7fff00; }
+    .below-average { color: #ff6347; }
+    .slightly-below-average { color: #ffa500; }
     .bad { color: red; }
-    .improving { color: #00ff7f; }
-    .stable { color: #ffffff; }
-    .overstocked { color: #ff4500; }
+    .overstocked { color: #ff1493; }
   </style>
 </head>
 <body>
@@ -132,7 +133,7 @@
     <a href="#">MISC ITEM</a>
   </div>
 
-  <!-- Main Content -->
+  <!-- Main content -->
   <div class="main">
     <div class="header">
       <div class="title-box">
@@ -140,52 +141,121 @@
       </div>
     </div>
 
+    <!-- Grid container starts here -->
     <div class="grid">
-      <!-- Example Card -->
-      <div class="card">
-        <img src="images/mushroom-event-trophy-2023.png" alt="Mushroom Event Trophy 2023">
-        <h2>Mushroom Event Trophy 2023</h2>
-        <div class="stats">
-          <p>Value - 425.5B</p>
-          <p>Buy - 230B</p>
-          <p>Sell - 200B</p>
-          <p>Demand - <span class="hot">Hot</span></p>
-          <p>Rating - 10</p>
-          <p>Stability - <span class="overpay">Overpay For</span> - <span class="rising">Rising</span></p>
-        </div>
-      </div>
+      <!-- Cards will go here -->
 
-      <div class="card">
-        <img src="images/the-divine-dao.png" alt="The Divine Dao">
-        <h2>The Divine Dao</h2>
-        <div class="stats">
-          <p>Value - 222B</p>
-          <p>Buy - 120B</p>
-          <p>Sell - 105B</p>
-          <p>Demand - <span class="hot">Hot</span></p>
-          <p>Rating - 10</p>
-          <p>Stability - <span class="overpay">Overpay For</span></p>
-        </div>
-      </div>
 
-      <div class="card">
-        <img src="images/cursed-hammer.png" alt="Cursed Hammer">
-        <h2>Cursed Hammer</h2>
-        <div class="stats">
-          <p>Value - 150B</p>
-          <p>Buy - 85B</p>
-          <p>Sell - 70B</p>
-          <p>Demand - <span class="insane">Insanely High</span></p>
-          <p>Rating - 9</p>
-          <p>Stability - <span class="overpay">Overpay For</span></p>
-        </div>
-      </div>
+<div class="card"><img src="images/mushroom-event-trophy-2023.png" alt="Mushroom Event Trophy 2023"><h2>Mushroom Event Trophy 2023</h2><div class="stats"><p>Value - 425.5B</p><p>Buy - 230B</p><p>Sell - 200B</p><p>Demand - <span class="hot">Hot</span></p><p>Rating - 10</p><p>Stability - <span class="overpay">Overpay For</span> - <span class="rising">Rising</span></p></div></div>
 
-      <!-- Repeat for all other items using the same pattern -->
-      <!-- You’ll continue adding cards here for each of your 60+ items -->
-      
-    </div>
-  </div>
+<div class="card"><img src="images/the-divine-dao.png" alt="The Divine Dao"><h2>The Divine Dao</h2><div class="stats"><p>Value - 222B</p><p>Buy - 120B</p><p>Sell - 105B</p><p>Demand - <span class="hot">Hot</span></p><p>Rating - 10</p><p>Stability - <span class="overpay">Overpay For</span></p></div></div>
 
+<div class="card"><img src="images/cursed-hammer.png" alt="Cursed Hammer"><h2>Cursed Hammer</h2><div class="stats"><p>Value - 150B</p><p>Buy - 85B</p><p>Sell - 70B</p><p>Demand - <span class="insane">Insanely High</span></p><p>Rating - 9</p><p>Stability - <span class="overpay">Overpay For</span></p></div></div>
+
+<div class="card"><img src="images/natures-divine-longbow.png" alt="Nature's Divine Longbow"><h2>Nature's Divine Longbow</h2><div class="stats"><p>Value - 85B</p><p>Buy - 55B</p><p>Sell - 45B</p><p>Demand - <span class="good">Good</span></p><p>Rating - 7</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/halloween-event-trophy-2023.png" alt="Halloween Event Trophy 2023"><h2>Halloween Event Trophy 2023</h2><div class="stats"><p>Value - 70B</p><p>Buy - 35B</p><p>Sell - 30B</p><p>Demand - <span class="insane">Insanely High</span></p><p>Rating - 9</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/cursed-grimoire.png" alt="Cursed Grimoire"><h2>Cursed Grimoire</h2><div class="stats"><p>Value - 40B</p><p>Buy - 25B</p><p>Sell - 20.5B</p><p>Demand - <span class="good">Good</span></p><p>Rating - 7.5</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/wraith-boss-plushie.png" alt="Wraith Boss Plushie"><h2>Wraith Boss Plushie</h2><div class="stats"><p>Value - 19.5B</p><p>Buy - 12.5B</p><p>Sell - 10B</p><p>Demand - <span class="good">Good</span></p><p>Rating - 7</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/jolly-dagger.png" alt="Jolly Dagger"><h2>Jolly Dagger</h2><div class="stats"><p>Value - 23B</p><p>Buy - 14B</p><p>Sell - 11.5B</p><p>Demand - <span class="great">Great</span></p><p>Rating - 8</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/christmas-event-trophy-2022.png" alt="Christmas Event Trophy 2022"><h2>Christmas Event Trophy 2022</h2><div class="stats"><p>Value - 20.5B</p><p>Buy - 12.5B</p><p>Sell - 10.5B</p><p>Demand - <span class="great">Great</span></p><p>Rating - 8</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/iridescent-flower.png" alt="Iridescent Flower"><h2>Iridescent Flower</h2><div class="stats"><p>Value - 17B</p><p>Buy - 12B</p><p>Sell - 9B</p><p>Demand - <span class="slightly-above-average">Slightly Above Average</span></p><p>Rating - 5.5</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/butterfly-festival-trophy.png" alt="Butterfly Festival Trophy"><h2>Butterfly Festival Trophy</h2><div class="stats"><p>Value - 15.7B</p><p>Buy - 9.5B</p><p>Sell - 8B</p><p>Demand - <span class="great">Great</span></p><p>Rating - 8</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/the-captains-rapier.png" alt="The Captain's Rapier"><h2>The Captain's Rapier</h2><div class="stats"><p>Value - 15B</p><p>Buy - 8.5B</p><p>Sell - 7B</p><p>Demand - <span class="insane">Insanely High</span></p><p>Rating - 9</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/fishing-festival-trophy-2021.png" alt="Fishing Festival Trophy 2021"><h2>Fishing Festival Trophy 2021</h2><div class="stats"><p>Value - 12B</p><p>Buy - 7.5B</p><p>Sell - 6B</p><p>Demand - <span class="good">Good</span></p><p>Rating - 7.5</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/cauldron-2023.png" alt="Cauldron 2023"><h2>Cauldron 2023</h2><div class="stats"><p>Value - 11B</p><p>Buy - 7B</p><p>Sell - 5.7B</p><p>Demand - <span class="good">Good</span></p><p>Rating - 7</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/golden-net.png" alt="Golden Net"><h2>Golden Net</h2><div class="stats"><p>Value - 12.5B</p><p>Buy - 10B</p><p>Sell - 7.5B</p><p>Demand - <span class="average">Average</span></p><p>Rating - 4</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/lunar-rabbit-statue.png" alt="Lunar Rabbit Statue"><h2>Lunar Rabbit Statue</h2><div class="stats"><p>Value - 11B</p><p>Buy - 8B</p><p>Sell - 6B</p><p>Demand - <span class="above-average">Above Average</span></p><p>Rating - 6</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/primordial-statue.png" alt="Primordial Statue"><h2>Primordial Statue</h2><div class="stats"><p>Value - 10B</p><p>Buy - 7B</p><p>Sell - 5.5B</p><p>Demand - <span class="above-average">Above Average</span></p><p>Rating - 6</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/pink-rabbit.png" alt="Pink Rabbit"><h2>Pink Rabbit</h2><div class="stats"><p>Value - 9B</p><p>Buy - 7B</p><p>Sell - 5.5B</p><p>Demand - <span class="average">Average</span></p><p>Rating - 4</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/the-reapers-scythe.png" alt="The Reaper's Scythe"><h2>The Reaper's Scythe</h2><div class="stats"><p>Value - 7B</p><p>Buy - 5B</p><p>Sell - 4B</p><p>Demand - <span class="slightly-above-average">Slightly Above Average</span></p><p>Rating - 5.5</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/primordial-plushie.png" alt="Primordial Plushie"><h2>Primordial Plushie</h2><div class="stats"><p>Value - 6.3B</p><p>Buy - 5B</p><p>Sell - 3.8B</p><p>Demand - <span class="average">Average</span></p><p>Rating - 4</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/the-reapers-crossbow.png" alt="The Reaper's Crossbow"><h2>The Reaper's Crossbow</h2><div class="stats"><p>Value - 3B</p><p>Buy - 2.5B</p><p>Sell - 2B</p><p>Demand - <span class="average">Average</span></p><p>Rating - 4</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/cutlass.png" alt="Cutlass"><h2>Cutlass</h2><div class="stats"><p>Value - 3B</p><p>Buy - 2.5B</p><p>Sell - 1.8B</p><p>Demand - <span class="slightly-below-average">Slightly Below Average</span></p><p>Rating - 3</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/pumpkin-hammer.png" alt="Pumpkin Hammer"><h2>Pumpkin Hammer</h2><div class="stats"><p>Value - 3B</p><p>Buy - 2.5B</p><p>Sell - 1.8B</p><p>Demand - <span class="slightly-below-average">Slightly Below Average</span></p><p>Rating - 3.5</p><p>Stability - <span class="improving">Improving</span></p></div></div>
+
+<div class="card"><img src="images/trouts-fury.png" alt="Trout's Fury"><h2>Trout's Fury</h2><div class="stats"><p>Value - 3B</p><p>Buy - 2.5B</p><p>Sell - 1.8B</p><p>Demand - <span class="slightly-below-average">Slightly Below Average</span></p><p>Rating - 3.5</p><p>Stability - <span class="improving">Improving</span></p></div></div>
+
+<div class="card"><img src="images/frost-sword.png" alt="Frost Sword"><h2>Frost Sword</h2><div class="stats"><p>Value - 1.9B</p><p>Buy - 1.5B</p><p>Sell - 1.05B</p><p>Demand - <span class="slightly-below-average">Slightly Below Average</span></p><p>Rating - 3.5</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/frost-hammer.png" alt="Frost Hammer"><h2>Frost Hammer</h2><div class="stats"><p>Value - 2B</p><p>Buy - 1.5B</p><p>Sell - 1.1B</p><p>Demand - <span class="average">Average</span></p><p>Rating - 4</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/halloween-event-trophy-2022.png" alt="Halloween Event Trophy 2022"><h2>Halloween Event Trophy 2022</h2><div class="stats"><p>Value - 2.5B</p><p>Buy - 2B</p><p>Sell - 1.5B</p><p>Demand - <span class="average">Average</span></p><p>Rating - 4</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/spider-pet-spawn-egg.png" alt="Spider Pet Spawn Egg"><h2>Spider Pet Spawn Egg</h2><div class="stats"><p>Value - 2.6B</p><p>Buy - 2.5B</p><p>Sell - 1.8B</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/dv-trophy.png" alt="DV Trophy"><h2>DV Trophy</h2><div class="stats"><p>Value - 2.7B</p><p>Buy - 2.25B</p><p>Sell - 1.6B</p><p>Demand - <span class="slightly-below-average">Slightly Below Average</span></p><p>Rating - 3.5</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/cat-pet-spawn-egg.png" alt="Cat Pet Spawn Egg"><h2>Cat Pet Spawn Egg</h2><div class="stats"><p>Value - 2.1B</p><p>Buy - 2B</p><p>Sell - 1.5B</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/candy-cane-scepter.png" alt="Candy Cane Scepter"><h2>Candy Cane Scepter</h2><div class="stats"><p>Value - 2.1B</p><p>Buy - 2B</p><p>Sell - 1.4B</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/thomas-lucky-fishing-rod.png" alt="Thomas Lucky Fishing Rod"><h2>Thomas Lucky Fishing Rod</h2><div class="stats"><p>Value - 2.1B</p><p>Buy - 2B</p><p>Sell - 1.4B</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/christmas-shovel.png" alt="Christmas Shovel"><h2>Christmas Shovel</h2><div class="stats"><p>Value - 1.4B</p><p>Buy - 1.3B</p><p>Sell - 1B</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/palm-tree.png" alt="Palm Tree"><h2>Palm Tree</h2><div class="stats"><p>Value - 1.5B</p><p>Buy - 900M</p><p>Sell - 750M</p><p>Demand - <span class="great">Great</span></p><p>Rating - 8</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/max-totem.png" alt="Max Totem"><h2>Max Totem</h2><div class="stats"><p>Value - 1.4B</p><p>Buy - 900M</p><p>Sell - 740M</p><p>Demand - <span class="good">Good</span></p><p>Rating - 7</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/tidal-aquarium.png" alt="Tidal Aquarium"><h2>Tidal Aquarium</h2><div class="stats"><p>Value - 1.2B</p><p>Buy - 950M</p><p>Sell - 750M</p><p>Demand - <span class="slightly-below-average">Slightly Below Average</span></p><p>Rating - 3.5</p><p>Stability - <span class="overstocked">Overstocked</span></p></div></div>
+
+<div class="card"><img src="images/draven-statue.png" alt="Draven Statue"><h2>Draven Statue</h2><div class="stats"><p>Value - 1.03B</p><p>Buy - 975M</p><p>Sell - 750M</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="overstocked">Overstocked</span></p></div></div>
+
+<div class="card"><img src="images/mining-event-2023-trophy.png" alt="Mining Event 2023 Trophy"><h2>Mining Event 2023 Trophy</h2><div class="stats"><p>Value - 1.03B</p><p>Buy - 975M</p><p>Sell - 750M</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="overstocked">Overstocked</span></p></div></div>
+
+<div class="card"><img src="images/cauldron-2021.png" alt="Cauldron 2021"><h2>Cauldron 2021</h2><div class="stats"><p>Value - 1.03B</p><p>Buy - 975M</p><p>Sell - 750M</p><p>Demand - <span class="average">Average</span></p><p>Rating - 4</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/legacy-food-processor.png" alt="Legacy Food Processor"><h2>Legacy Food Processor</h2><div class="stats"><p>Value - 1B</p><p>Buy - 1B</p><p>Sell - 750M</p><p>Demand - <span class="bad">Bad</span></p><p>Rating - 1</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/cletus-lucky-sickle.png" alt="Cletus Lucky Sickle"><h2>Cletus Lucky Sickle</h2><div class="stats"><p>Value - 892.5B</p><p>Buy - 850M</p><p>Sell - 650M</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/tier-2-vending-machine.png" alt="Tier 2 Vending Machine"><h2>Tier 2 Vending Machine</h2><div class="stats"><p>Value - 990M</p><p>Buy - 550M</p><p>Sell - 440M</p><p>Demand - <span class="hot">Hot</span></p><p>Rating - 10</p><p>Stability - <span class="overpay">Overpay For</span> - <span class="rising">Rising</span></p></div></div>
+
+<div class="card"><img src="images/yellow-frog.png" alt="Yellow Frog"><h2>Yellow Frog</h2><div class="stats"><p>Value - 935M</p><p>Buy - 850M</p><p>Sell - 650M</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/wide-snowman.png" alt="Wide Snowman"><h2>Wide Snowman</h2><div class="stats"><p>Value - 680M</p><p>Buy - 650M</p><p>Sell - 500M</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="overstocked">Overstocked</span></p></div></div>
+
+<div class="card"><img src="images/indigo-jukebox-disk.png" alt="Indigo Jukebox Disk"><h2>Indigo Jukebox Disk</h2><div class="stats"><p>Value - 620M</p><p>Buy - 650M</p><p>Sell - 500M</p><p>Demand - <span class="bad">Bad</span></p><p>Rating - 1</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/cauldron-2022.png" alt="Cauldron 2022"><h2>Cauldron 2022</h2><div class="stats"><p>Value - 620M</p><p>Buy - 495M</p><p>Sell - 380M</p><p>Demand - <span class="average">Average</span></p><p>Rating - 4</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/tall-snowman.png" alt="Tall Snowman"><h2>Tall Snowman</h2><div class="stats"><p>Value - 630M</p><p>Buy - 600M</p><p>Sell - 470M</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="overstocked">Overstocked</span></p></div></div>
+
+<div class="card"><img src="images/globe-snowman.png" alt="Globe Snowman"><h2>Globe Snowman</h2><div class="stats"><p>Value - 630M</p><p>Buy - 600M</p><p>Sell - 470M</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="overstocked">Overstocked</span></p></div></div>
+
+<div class="card"><img src="images/penguin-pet-spawn-egg.png" alt="Penguin Pet Spawn Egg"><h2>Penguin Pet Spawn Egg</h2><div class="stats"><p>Value - 420M</p><p>Buy - 400M</p><p>Sell - 330M</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="overstocked">Overstocked</span></p></div></div>
+
+<div class="card"><img src="images/buffalkor-crystal-block.png" alt="Buffalkor Crystal Block"><h2>Buffalkor Crystal Block</h2><div class="stats"><p>Value - 360M</p><p>Buy - 300M</p><p>Sell - 250M</p><p>Demand - <span class="slightly-below-average">Slightly Below Average</span></p><p>Rating - 3</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/wreath.png" alt="Wreath"><h2>Wreath</h2><div class="stats"><p>Value - 367M</p><p>Buy - 350M</p><p>Sell - 280M</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="overstocked">Overstocked</span></p></div></div>
+
+<div class="card"><img src="images/fish-banner.png" alt="Fish Banner"><h2>Fish Banner</h2><div class="stats"><p>Value - 367M</p><p>Buy - 350M</p><p>Sell - 280M</p><p>Demand - <span class="below-average">Below Average</span></p><p>Rating - 2</p><p>Stability - <span class="overstocked">Overstocked</span></p></div></div>
+
+<div class="card"><img src="images/ruby-block.png" alt="Ruby Block"><h2>Ruby Block</h2><div class="stats"><p>Value - 65M</p><p>Buy - 45M</p><p>Sell - 35M</p><p>Demand - <span class="above-average">Above Average</span></p><p>Rating - 6.5</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+<div class="card"><img src="images/diamond-block.png" alt="Diamond Block"><h2>Diamond Block</h2><div class="stats"><p>Value - 41M</p><p>Buy - 28M</p><p>Sell - 22.5M</p><p>Demand - <span class="above-average">Above Average</span></p><p>Rating - 6.5</p><p>Stability - <span class="stable">Stable</span></p></div></div>
+
+    </div> <!-- end of grid -->
+  </div> <!-- end of main -->
 </body>
 </html>
+
